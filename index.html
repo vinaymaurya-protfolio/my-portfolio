@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animation.css">
+    
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo" style="--i: 1" >Port <span>Folio</span></a>
+            <ul>
+                <li><a href="#" class="active" style="--i: 2" >Home</a></li>
+                <li><a href="#" style="--i: 3" >About Us</a></li>
+                <li><a href="#" style="--i: 4" >Skills</a></li>
+                <li><a href="#" style="--i: 5" >Services</a></li>
+                <li><a href="#" style="--i: 6" >Portfolio</a></li>
+                <li><a href="#" style="--i: 7" >Contact Us</a></li>
+            </ul>
+
+            <a href="#" class="cvbtn" style="--i: 8" >Download CV <i class="fa-solid fa-download"></i></a>
+            
+            <button id="darkModeToggle" class="dark-btn" style="--i: 9">
+    <i class="fa-solid fa-sun"></i>
+</button>
+
+        </nav>
+    </header>
+    <!--hero section-->
+    <section id="home" class="hero-container">
+        <div class="hero-image hero-image-animation ">
+            <img src="images/profile.jpg" alt="Image">
+            </div>
+            <div class="hero-content hero-content-animation">
+                <h3 style="--i: 1" >Hello, I'm</h3>
+                <h1 style="--i: 2" >Vinay Maurya</h1>
+                <h2 style="--i: 3" >AND I'm a <span id="typewriter">Web Developer</span></h2>
+                <p style="--i: 4" >I am a passionate web developer who loves creating modern, responsive, and user-friendly websites. I enjoy turning ideas into real, interactive digital experiences using clean code and creative design.</p>
+
+        <div class="social-icons" style="--i: 5" >
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+
+        <div class="hero-btn" style="--i: 6" >
+            <a href="#" class="btn">Hire Me</a>
+            <a href="#" class="btn">Contact Me</a>
+        </div>
+        </div>
+    </section>
+
+    <!--stats-->
+    <section class="stats stats-animation ">
+        <div class="stat">
+            <h2>3+</h2>
+            <span>Years of <br>experiences</span>
+        </div>
+        <div class="stat">
+            <h2>5+</h2>
+            <span>Project <br>completed</span>
+        </div>
+        <div class="stat">
+            <h2>2+</h2>
+            <span>Technologies <br>mastered</span>
+        </div>
+        <div class="stat">
+            <h2>2+</h2>
+            <span>Statisfied <br>client</span>
+        </div>
+    </section>
+
+    <script>
+    const toggleBtn = document.getElementById("darkModeToggle");
+    const body = document.body;
+    const icon = toggleBtn.querySelector("i");
+
+    // Load saved mode
+    if (localStorage.getItem("theme") === "light") {
+        body.classList.add("light-mode");
+        icon.classList.replace("fa-sun", "fa-moon");
+    }
+
+    toggleBtn.addEventListener("click", () => {
+        body.classList.toggle("light-mode");
+
+        if (body.classList.contains("light-mode")) {
+            icon.classList.replace("fa-sun", "fa-moon");
+            localStorage.setItem("theme", "light");
+        } else {
+            icon.classList.replace("fa-moon", "fa-sun");
+            localStorage.setItem("theme", "dark");
+        }
+    });
+</script>
+
+
+</body>
+</html>
