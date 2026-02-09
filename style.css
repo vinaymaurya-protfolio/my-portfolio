@@ -143,7 +143,7 @@ section {
 }
 
 .hero-image img {
-    margin-left: 150px;
+    margin-left: 100px;
     height: 300px;
     width: 200px;
     min-width: 300px;
@@ -335,5 +335,6 @@ body.light-mode .hero-image img {
 body.light-mode .stats .stat:not(:last-child) {
     border-right: 1px solid #ef8bf4;
 }
+
 
 
