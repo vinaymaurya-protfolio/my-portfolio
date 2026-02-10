@@ -146,7 +146,7 @@ section {
     margin-left: 200px;
     height: 470px;
     width: 330px;
-    min-width: 400px;
+    min-width: 350px;
     filter: drop-shadow(0 0 60px var(--global-clr) );
 }
 
@@ -335,6 +335,7 @@ body.light-mode .hero-image img {
 body.light-mode .stats .stat:not(:last-child) {
     border-right: 1px solid #ef8bf4;
 }
+
 
 
 
