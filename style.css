@@ -143,9 +143,9 @@ section {
 }
 
 .hero-image img {
-    margin-left: 180px;
+    margin-left: 200px;
     height: 500px;
-    width: 250px;
+    width: 300px;
     min-width: 300px;
     filter: drop-shadow(0 0 60px var(--global-clr) );
 }
@@ -335,6 +335,7 @@ body.light-mode .hero-image img {
 body.light-mode .stats .stat:not(:last-child) {
     border-right: 1px solid #ef8bf4;
 }
+
 
 
 
